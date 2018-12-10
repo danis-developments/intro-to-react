@@ -14,8 +14,24 @@
           return(
             <div>
               <h1>Hello World!</h1>
+              <WishList />
             </div>
           );        
+        }
+      }
+      
+      class WishList extends React.Component {
+        render(){
+          return(
+            <div>
+            <h2>Wish List</h2>
+              <ul>
+                <li>Hamilton Tickets</li>
+                <li>Eggs Benedict</li>
+                <li>Octopath Traveler</li>
+              </ul>
+            </div>
+          );
         }
       }
 
