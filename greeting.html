@@ -14,11 +14,34 @@
           return(
             <div>
               <h1>Hello {this.props.name}!</h1>
+              <WishList store="Amazon"/>
             </div>
           );        
         }
       }
       
+      class WishList extends React.Component {
+        constructor(props){
+          super(props);
+          this.state = {
+            totalItems : 3,
+          }
+        }
+        render(){
+          return(
+            <div>
+            <h2>{this.props.store} Wish List</h2>
+              <ul>
+                <li>Hamilton Tickets</li>
+                <li>Eggs Benedict</li>
+                <li>Octopath Traveler</li>
+              </ul>
+              <p>Total Items: {this.state.totalItems}</p>
+            </div>
+          );
+        }
+      }
+
       ReactDOM.render(
         <Greeting name="Dan"/>, document.getElementById('app')
       );
